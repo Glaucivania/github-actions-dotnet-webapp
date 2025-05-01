@@ -1,0 +1,19 @@
+name: Acionar por push e a cada hora
+
+on:
+  push:
+    branches:
+      - main 
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Run a script
+        run: echo "Executando Workflow com sucesso!"
