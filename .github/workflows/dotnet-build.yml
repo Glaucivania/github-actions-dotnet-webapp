@@ -15,5 +15,5 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v3
 
-      - name: Run a script
+      - name: Rodar comando
         run: echo "Executando Workflow com sucesso!"
